@@ -1,0 +1,204 @@
+/* ABOUT ME SECTION*/
+.s2-sec-about {
+  margin-top: clamp(50px, 10vw, 75px);
+  padding-inline: clamp(10px, 6vw, 100px);
+  display: flex;
+  flex-direction: column;
+  background-color: hsl(var(--clr-60), 100%);
+  justify-self: center;
+    
+  .about-me {
+    margin-top: clamp(50px, 10vw, 75px);
+    display: flex;
+    flex-direction: column;
+    border-radius: 25px;
+    overflow: hidden;
+    gap: 15px;
+    color: hsl(var(--clr-40), 11%);
+  }
+
+  .about .head,
+  .achievements .head,
+  .education .head,
+  .experience .head,
+  .competencies .head,
+  .stack .head {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    color: hsl(var(--clr-40), 11%);
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+  }
+
+  .competencies .head,
+  .stack .head {
+    flex-direction: row;
+    justify-content: unset;
+    gap: 20px;
+  }
+
+  .experience .head svg,
+  .education .head svg, 
+  .about .head svg,
+  .achievements .head svg {
+    width: 50px;
+  }
+
+  .top {
+    display: flex;
+    gap: 15px;
+  }
+
+  .top .achievements {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    color: inherit;
+    background-color: hsl(var(--clr-60), 90%);
+    padding: 25px;
+  }
+
+  .top .about {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    color: inherit;
+    background-color: hsl(var(--clr-60), 90%);
+    padding: 25px;
+  }
+
+    @media screen and (min-width: 900px) {
+    .top {
+      flex-direction: row;
+    }
+
+    .top .about {
+      width: 60%;
+    }
+
+    .top .achievements {
+      margin-top: unset;
+      width: 40%;
+    }
+  }
+
+  .achievements .count p span {
+    color: var(--clr-10);
+    font-size: 1.6rem;
+    font-weight: 900;
+    margin-right: 10px;
+  }
+
+  .bottom {
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+  }
+
+  @media screen and (min-width: 1050px) {
+    .bottom {
+      flex-direction: row;
+    }
+
+    .bottom .experience,
+    .bottom .education {
+      width: 60%;
+    }
+  }
+
+  .bottom .experience {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: hsl(var(--clr-60), 90%);
+    padding: 25px;
+  }
+
+  .bottom .texts {
+    display: flex;
+    flex-direction: column;
+    margin-top: 14px;
+    gap: 6px;
+  }
+
+  .bottom .texts-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+  }
+
+  .texts-wrap .titles :first-child {
+    font-weight: 900;
+  }
+
+  .education .texts-wrap > p {
+    color: var(--clr-10);
+    font-weight: 900;
+    opacity: unset;
+  }
+
+
+  .bottom .education {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: hsl(var(--clr-60), 90%);
+    padding: 25px;
+  }
+
+  .competencies {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding-inline: 50px;
+    width: 100%;
+  }
+
+  .competencies .skills-and-steck {
+    display: flex;
+    gap: 25px;
+    margin-top: 25px;
+    flex-direction: column;
+  }
+
+  .competencies .skills-and-steck > :first-child {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    p {
+      margin-top: 12px;
+    }
+  }
+
+  .competencies .skills-and-steck> :last-child {
+    width: 100%;
+
+    .stack {
+      margin-top: 12px;
+      color: var(--clr-10);
+    }
+  }
+
+  .competencies .skills-and-steck .stack {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+  }
+
+  @media screen and (min-width: 700px) {
+    .competencies .skills-and-steck > :first-child {
+      width: 70%;
+    }
+    
+    .competencies .skills-and-steck > :last-child {
+      width: 30%;
+    }
+    .competencies .skills-and-steck {
+      flex-direction: row;
+    }
+  }
+}

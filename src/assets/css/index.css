@@ -1,0 +1,130 @@
+@font-face {
+  font-family: body;
+  src: url('../fonts/WomanQuotes.otf');
+}
+@font-face {
+  font-family: heading;
+  src: url('../fonts/Sunrise International Demo.otf');
+}
+@font-face {
+  font-family: accent;
+  src: url('../fonts/Summer Girl.otf');
+}
+
+:root {
+  font-size: 62.25%;
+  --clr-60: #eae4dd;
+  --clr-30: #372f29;
+}
+html {
+  scroll-behavior: smooth;
+  font-size: 62.25%;
+  overflow-x: hidden;
+}
+
+body {
+  font-size: 1.6rem;
+  max-width: 100vw;
+  font-family: body;
+  padding-inline: clamp(24px, 10vw , 64px);
+  background-color: var(--clr-60);
+  position: relative;
+  overflow-x: hidden;
+}
+
+  /* background blobs */
+
+  .blobs {
+    display: none;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+  }
+
+  .blob {
+    display: block !important;
+    opacity: .1;
+    position: absolute;
+    width: 340px;
+    aspect-ratio: 1/1;
+    background-color: var(--clr-30);
+    border-radius: 56px;
+  }
+
+  .blob.blured {
+    filter: blur(36px);
+    opacity: .24;
+    border-radius: 92px;
+  }
+  
+  .top.left {
+    top: -250px;
+    left: -180px;
+    transform: translate(4vw, 4vw);
+    border-radius: 84px;
+  }
+   
+  .top.right {
+    top: -80px;
+    right: -50px;
+  }
+
+  .bottom.left {
+    height: 200px;
+    bottom: -20px;
+    left: -60px;
+  }
+
+  .bottom.right {
+    width: clamp(81px, 27vw, 348px);
+    border-radius: clamp(21px, 27%, 93px);
+    bottom: -60px;
+    right: 30vw;
+    transform: translateY(1vw);
+  }
+
+/* Global Settings */
+
+h1 {
+  font-family: heading;
+  font-size: clamp(40px, 5vw, 184px);
+  font-weight: 500;
+  line-height: 1;
+  opacity: .95;
+}
+h2 {
+  font-weight: 600;
+  font-family: logo;
+  font-size: clamp(15px, 2.5vw, 19px);
+  text-transform: capitalize;
+}
+h3 {
+  font-family: logo;
+  font-size: clamp(12px, 2.5vw, 10px);
+  font-weight: 500;
+  text-transform: capitalize;
+}
+p {
+  font-size: 16px;
+  font-weight: 500;
+  opacity: .8;
+  filter: unset;
+}
+a {
+  text-decoration: none;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: hsl(var(--clr-60), 100%);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: hsl(var(--clr-40), 11%);
+  border: .2px solid hsl(var(--clr-60), 100%);
+  border-radius: 4px;
+}
+/* End */
